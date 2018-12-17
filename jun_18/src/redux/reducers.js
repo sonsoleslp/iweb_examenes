@@ -2,10 +2,7 @@ import {combineReducers} from 'redux';
 
 function winnerReducer(state = 0, action = {}) {
  switch(action.type) {
-   case "VOTE":
-   return action.index;
-   default:
-   return state;
+   // Código aquí
  }
 }
 function contestantsReducer(state = [], action = {}) {
