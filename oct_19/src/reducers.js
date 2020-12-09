@@ -8,8 +8,18 @@ function productsReducer(state = [], action={}) {
 
 }
 
+function saleFilter(state = false, action){
+switch(action.type){
+	case "TOGGLE_SALE_FILTER":
+		return !state;
+	default:
+		return state;
+	}
+}
+
 const GlobalState = combineReducers({ 
-  products: productsReducer
+  products: productsReducer,
+  saleFilter: saleFilter
 });
 
 export default GlobalState;

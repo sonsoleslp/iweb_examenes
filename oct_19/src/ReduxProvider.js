@@ -9,7 +9,7 @@ import initialState from "./initialState";
 export default class ReduxProvider extends React.Component {
   constructor(props) {
     super(props);
-    this.initialState = initialState;
+    this.initialState = {...initialState, saleFilter: null};
     this.store = this.configureStore();
   }
 
